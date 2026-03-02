@@ -9,7 +9,16 @@ export function MobileCTA() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 800);
+    const onScroll = () => {
+      const formEl = document.querySelector('#lead-form');
+      if (formEl) {
+        const rect = formEl.getBoundingClientRect();
+        const isOverForm = rect.top < window.innerHeight && rect.bottom > 0;
+        setShow(window.scrollY > 800 && !isOverForm);
+      } else {
+        setShow(window.scrollY > 800);
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
