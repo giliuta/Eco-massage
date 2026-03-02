@@ -58,7 +58,7 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="lead-form" data-testid="lead-form-section" className="py-20 lg:py-32 bg-[#F5F7FA] relative">
+    <section id="lead-form" data-testid="lead-form-section" className="py-20 lg:py-32 bg-[#F5F7FA] relative pb-28 lg:pb-32">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0055FF] via-[#00D4FF] to-[#0055FF]" />
       <div className="max-w-xl mx-auto px-4 sm:px-6">
         <motion.div
