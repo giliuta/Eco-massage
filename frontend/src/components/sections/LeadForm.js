@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Shield, Phone, MessageCircle, CheckCircle, Loader2 } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${process.env.REACT_APP_BACKEND_URL || ''}/api`;
 const WHATSAPP_URL = 'https://wa.me/35795705596';
 
 export default function LeadForm() {
