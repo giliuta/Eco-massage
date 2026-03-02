@@ -81,18 +81,19 @@ export default function Testimonials() {
                     ) : (
                       <button
                         onClick={() => setPlayingIdx(i)}
+                        data-testid={`play-btn-${i}`}
                         className="w-full h-full flex items-center justify-center group relative"
                       >
                         <video
                           src={video.url}
                           muted
                           preload="metadata"
-                          className="w-full h-full object-cover opacity-50"
+                          className="w-full h-full object-cover opacity-60"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A]/80 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A]/80 via-[#0A0E1A]/20 to-transparent" />
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-16 h-16 rounded-full bg-[#0055FF]/80 flex items-center justify-center shadow-[0_0_30px_rgba(0,85,255,0.5)] group-hover:scale-110 transition-transform">
-                            <Play className="w-7 h-7 text-white ml-1" fill="white" />
+                          <div className="w-20 h-20 rounded-full bg-[#0055FF] flex items-center justify-center shadow-[0_0_40px_rgba(0,85,255,0.6)] group-hover:scale-110 group-hover:bg-[#003CC7] transition-all">
+                            <Play className="w-9 h-9 text-white ml-1" fill="white" />
                           </div>
                         </div>
                       </button>
