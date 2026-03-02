@@ -1,0 +1,160 @@
+{
+  "identity": {
+    "persona": "E1",
+    "tone": "High-Tech Luxury, Scientific Wellness, Futuristic, Premium",
+    "theme_strategy": "Dark Mode Dominant with Electric Blue/Cyan Accents"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Montserrat",
+      "weight": "900",
+      "style": "uppercase",
+      "letter_spacing": "tracking-widest (0.2em)",
+      "usage": "Hero titles, Section headers"
+    },
+    "body": {
+      "font_family": "Inter, DM Sans",
+      "weight": "400/500",
+      "usage": "Paragraphs, descriptions, lists"
+    },
+    "accents": {
+      "font_family": "Montserrat",
+      "weight": "700",
+      "usage": "Buttons, Nav links, Badges"
+    }
+  },
+  "colors": {
+    "primary": "#0055FF",
+    "secondary": "#00D4FF",
+    "accent": "#D4A853",
+    "background_dark": "#0A0E1A",
+    "background_light": "#F5F7FA",
+    "surface_dark": "#111625",
+    "surface_glass": "rgba(255, 255, 255, 0.05)",
+    "text_primary_dark": "#FFFFFF",
+    "text_secondary_dark": "#A0AEC0",
+    "text_primary_light": "#0A0E1A",
+    "success": "#10B981",
+    "error": "#EF4444"
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "classes": "backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl",
+      "usage": "Cards, Sticky Header, Floating Elements"
+    },
+    "glow_effects": {
+      "blue_led": "shadow-[0_0_20px_rgba(0,85,255,0.5)]",
+      "cyan_pulse": "shadow-[0_0_15px_rgba(0,212,255,0.4)]",
+      "text_glow": "drop-shadow-[0_0_8px_rgba(0,212,255,0.5)]"
+    },
+    "gradients": {
+      "hero_overlay": "bg-gradient-to-b from-transparent via-background_dark/50 to-background_dark",
+      "tech_accent": "bg-gradient-to-r from-primary to-secondary"
+    },
+    "borders": {
+      "style": "1px solid rgba(255,255,255,0.1)",
+      "radius": "rounded-2xl"
+    }
+  },
+  "layout_strategy": {
+    "grid_system": "Bento Grid (Mode A for Marketing, Mode B for Features)",
+    "spacing": "Generous (p-8 to p-32)",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "mobile_first": "Stack vertically on mobile, grid on lg screens",
+    "z_index": {
+      "sticky_nav": "z-50",
+      "modal": "z-50",
+      "floating_cta": "z-40",
+      "content": "z-10",
+      "background": "z-0"
+    }
+  },
+  "components": {
+    "header": {
+      "type": "Sticky Glassmorphism",
+      "features": ["Language Switcher (RU/EN/EL)", "Logo", "Nav Links", "Book Now CTA"],
+      "path": "/app/frontend/src/components/layout/Header.js"
+    },
+    "hero": {
+      "type": "Full Screen Immersive",
+      "features": ["Video/Image Background", "Animated Text", "OPEN/CLOSED Badge", "Primary CTA"],
+      "path": "/app/frontend/src/components/sections/Hero.js"
+    },
+    "badges": {
+      "open_closed": {
+        "logic": "Real-time Europe/Nicosia timezone check",
+        "style": "Pill shape, pulsing dot (Green=Open, Red=Closed)",
+        "path": "/app/frontend/src/components/ui/StatusBadge.js"
+      }
+    },
+    "cards": {
+      "service_card": "Glassmorphism, hover lift, glow border on hover",
+      "pricing_card": "Premium border, list of features, Gold CTA",
+      "testimonial_card": "Video thumbnail or quote with avatar"
+    },
+    "forms": {
+      "lead_form": "Shadcn Form, Zod Validation, Floating Labels, Gold Submit Button",
+      "path": "/app/frontend/src/components/sections/ContactForm.js"
+    },
+    "whatsapp_button": {
+      "style": "Floating bottom-right, Green brand color, Pulse effect",
+      "path": "/app/frontend/src/components/ui/WhatsAppButton.js"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "types": {
+      "fade_up": {
+        "initial": { "opacity": 0, "y": 20 },
+        "whileInView": { "opacity": 1, "y": 0 },
+        "viewport": { "once": true }
+      },
+      "stagger_children": {
+        "container": { "transition": { "staggerChildren": 0.1 } }
+      },
+      "hover_scale": {
+        "whileHover": { "scale": 1.02 }
+      }
+    }
+  },
+  "image_urls": {
+    "hero_bg": {
+      "url": "https://images.unsplash.com/photo-1634141737038-a7d1aa9c932d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxmdXR1cmlzdGljJTIwbWFzc2FnZSUyMHJvb20lMjBibHVlJTIwbGlnaHR8ZW58MHx8fHwxNzcyNDQ3NjM4fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark futuristic hallway with blue lighting",
+      "category": "hero"
+    },
+    "technology_abstract": {
+      "url": "https://images.unsplash.com/photo-1611176260338-4ff8a110d452?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGJsdWUlMjBzb3VuZCUyMHdhdmUlMjBkaWdpdGFsJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NzI0NDc2NTR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Blue and white light streaks",
+      "category": "background"
+    },
+    "wellness_person": {
+      "url": "https://images.unsplash.com/photo-1759216853056-536d6e22634e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHw0fHxoYXBweSUyMHdvbWFuJTIwcmVsYXhpbmclMjB3ZWxsbmVzcyUyMHNwYSUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MjQ0NzY1OHww&ixlib=rb-4.1.0&q=85",
+      "description": "Woman in swimsuit enjoying sauna",
+      "category": "services"
+    },
+    "location_bg": {
+      "url": "https://images.unsplash.com/photo-1769345837060-20c08e0d67e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBtYXJpbmElMjBzdW5zZXQlMjBtZWRpdGVycmFuZWFufGVufDB8fHx8MTc3MjQ0NzY3Mnww&ixlib=rb-4.1.0&q=85",
+      "description": "Coastal city skyline at dusk",
+      "category": "location"
+    }
+  },
+  "universal_guidelines": [
+    "Do NOT use 'Inter' for headings. Use Montserrat.",
+    "Do NOT use gradients for dark backgrounds; use solid dark colors with subtle noise or glowing accents.",
+    "Use 'framer-motion' for all entrance animations.",
+    "Ensure 4.5:1 contrast ratio for text.",
+    "Mobile images must be max-h-[80vh].",
+    "All interactive elements must have 'data-testid'.",
+    "Use 'lucide-react' for icons."
+  ],
+  "instructions_to_main_agent": "1. Install 'lucide-react', 'framer-motion', 'react-icons' if not present. 2. Create the folder structure for components if missing. 3. Implement the Layout first, then Hero, then other sections. 4. Use the provided image URLs. 5. Ensure the OPEN/CLOSED badge logic uses the correct timezone (Europe/Nicosia). 6. Use Shadcn components for complex interactions (Accordion, Dialog, Carousel) but style them to match the dark theme.",
+  "tech_stack": {
+    "framework": "React",
+    "styling": "Tailwind CSS",
+    "components": "Shadcn/UI",
+    "icons": "Lucide React",
+    "animation": "Framer Motion",
+    "state_management": "React Context (for Language)"
+  }
+}
