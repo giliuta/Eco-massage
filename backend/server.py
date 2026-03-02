@@ -21,8 +21,8 @@ app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
 class LeadCreate(BaseModel):
-    name: str
-    phone: str
+    name: str = Field(..., min_length=1, max_length=200)
+    phone: str = Field(..., min_length=6, max_length=30)
     contact_method: str = "phone"
     preferred_time: Optional[str] = None
     concern: Optional[str] = None
