@@ -49,9 +49,12 @@ export default function LeadForm() {
       <section id="lead-form" data-testid="lead-form-section" className="py-20 lg:py-32 bg-[#F5F7FA]">
         <div className="max-w-lg mx-auto px-4 text-center">
           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="mb-6">
-            <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto" />
+            <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto">
+              <CheckCircle className="w-10 h-10 text-emerald-500" />
+            </div>
           </motion.div>
-          <h3 className="text-2xl font-montserrat font-bold text-[#1A1A2E] mb-4">{t(leadForm.success)}</h3>
+          <h3 data-testid="lead-form-success" className="text-2xl font-montserrat font-bold text-[#1A1A2E] mb-4">{t(leadForm.success)}</h3>
+          <a href="tel:+35795705596" className="text-[#0055FF] hover:underline text-sm">+357 95 705596</a>
         </div>
       </section>
     );
